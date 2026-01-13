@@ -40,4 +40,6 @@ workflowDefinition:
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
+    dependsOn:
+      - externalId: icapi_datapoints_extractor_task
    
