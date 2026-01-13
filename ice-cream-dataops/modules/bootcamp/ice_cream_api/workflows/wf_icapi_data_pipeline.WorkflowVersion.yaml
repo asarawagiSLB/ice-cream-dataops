@@ -25,7 +25,7 @@ workflowDefinition:
     parameters:
       function:
         externalId: icapi_datapoints_extractor
-        data: { "hours": 1 }
+        data: {"sites": ["Sao_Paulo",'Houston','Oslo','Kuala_Lumpur','Hannover','Nuremberg','Marseille','Chicago','Rotterdam','London'],"hours": 336,"backfill": true}
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
@@ -36,7 +36,7 @@ workflowDefinition:
     parameters:
       function:
         externalId: oee_timeseries
-        data: { "hours": 1 }
+        data: {"sites": ["Houston","Oslo","Kuala_Lumpur","Hannover","Nuremberg","Marseille","Sao_Paulo","Chicago","Rotterdam","London"], "lookback_minutes": 10160}
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
